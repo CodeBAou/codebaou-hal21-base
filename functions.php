@@ -297,10 +297,10 @@ function agregar_campos_personalizados_usuario( $user ) {
         </tr>
 
         <tr>
-            <th><label for="codebaou_fecha_revision_legal">Email contacto - Legal</label></th>
+            <th><label for="codebaou_fecha_revision_legal">Fecha ultima revisión legal</label></th>
             <td>
                 <input type="text" name="codebaou_fecha_revision_legal" id="codebaou_fecha_revision_legal" value="<?php echo esc_html( get_option('codebaou_fecha_revision_legal', true)) ?>" class="regular-text" />
-                <br><span class="description">Por favor, introduce para el documento legal.</span>
+                <br><span class="description">Por favor, introduce la fecha para el documento legal.</span>
             </td>
         </tr>
     </table>

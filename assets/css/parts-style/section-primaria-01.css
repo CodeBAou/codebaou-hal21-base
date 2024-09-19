@@ -2,66 +2,106 @@
     from {opacity:0}
     to {opacity:0.8}
 }
-.section-primaria-01 {
-    padding-top:10%;
-    padding-bottom:10%;
-    position: relative;
-    height: 800px; /* Ajusta la altura según sea necesario */
-    overflow: hidden; /* Asegura que la imagen no sobresalga del contenedor */
+
+
+.codebaou-section-primaria-01-content * {
+   margin:0;
+   padding:0;
 }
 
-.section-primaria-01 .wp-block-codebaou-hal21-codebaou-hal21-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-    z-index: 1; /* Imagen en el fondo */
-}
-
-.section-primaria-01 h1,
-.section-primaria-01 h2,
-.section-primaria-01 p {
-    position: relative;
-    color: #ffffff; /* Cambia el color si es necesario para que el texto sea visible sobre la imagen */
-    text-align: center;
-    z-index: 2; /* Texto encima de la imagen */
-    margin: 0;
-    padding: 10px; /* Ajusta el espaciado según sea necesario */
-    animation-name:AnimationLoad-primaria-01-title;
-    animation-fill-mode: forwards;
-    animation-duration: 8s;
-    font-size:5rem;
-}
-
-
-.section-primaria-01 h1{
-
-}
-
-.section-primaria-01 h2{
-
-}
-
-.section-primaria-01 p{
-
-}
-
-/** Ajuste tamaños fuentes */
-@media(max-width:1500px){
-  
-}
-
-
-@media(max-width:1070px){
- 
-}
-
-@media( max-width: 760px){
+.codebaou-section-primaria-01-content{
+    display:flex;
+    position:relative;
    
+    overflow:hidden;
 }
 
-@media( max-width: 554px){
-  
+.codebaou-section-primaria-01-content > img{
+    width:auto;
+    height:auto;
+    position:relative;
+}
+
+.codebaou-section-primaria-01-content > h1{
+    position:absolute !important;
+    top:10%;
+    left:10%;
+    margin:0;
+    font-size:6em;
+}
+
+.codebaou-section-primaria-01-content > h2{
+    position:absolute !important;
+    top:50%;
+    left:40%;
+    margin:0;
+    font-size:6em;
+}
+
+.codebaou-section-primaria-01-content > h3{
+    position:absolute !important;
+    top:20%;
+    left:80%;
+    margin:0;
+    font-size:4em;
+}
+
+
+@media(max-width:1161px){
+    .codebaou-section-primaria-01-content > h1{
+       
+        font-size:4em;
+    }
+    
+    .codebaou-section-primaria-01-content > h2{
+        top:60%;
+        font-size:4em;
+    }
+    
+    .codebaou-section-primaria-01-content > h3{
+        top:30%;
+        font-size:3em;
+    }
+}
+
+
+@media(max-width:750px){
+    .codebaou-section-primaria-01-content > h1{
+        left:0;
+        font-size:3em;
+    }
+    
+    .codebaou-section-primaria-01-content > h2{
+        top:60%;
+        left:0;
+        font-size:4em;
+    }
+    
+    .codebaou-section-primaria-01-content > h3{
+        top:40%;
+        left:60%;
+        font-size:3em;
+    }
+
+}
+
+
+@media(max-width:554px){
+
+    .codebaou-section-primaria-01-content > h1{
+        left:0;
+        font-size:2em;
+    }
+    
+    .codebaou-section-primaria-01-content > h2{
+        top:60%;
+        left:0;
+        font-size:2em;
+    }
+    
+    .codebaou-section-primaria-01-content > h3{
+        top:40%;
+        left:80%;
+        font-size:1em;
+    }
 }
