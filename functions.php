@@ -1,7 +1,7 @@
 <?php 
 
 /*
- * Un tema de hal21 y codebaou
+ * Funcionalidad para el theme codebaou-hal21-base
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -10,15 +10,11 @@
  */
 
 
-
 /** SUPPORTS */
 
 add_theme_support( 'editor-styles' );
 
 
-
-
- 
 /** ESTILOS  */
 
  
@@ -150,7 +146,7 @@ add_action('rest_api_init', function () {
         'callback' => 'get_site_url_api',
     ));
 
-    //Ruta para obtener dominio
+    //Ruta para obtener menus
     register_rest_route('codebaou_hal21_end_point/v1', '/menus', array(
         'methods'  => 'GET',
         'callback' => 'get_menus_and_links_api',
