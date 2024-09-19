@@ -1,0 +1,98 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * MENU RESPONSIVE
+ * 	>1200px
+ *  >992px 
+ *  >768px 
+ *  ≥576px  
+ *  <576px
+ */
+
+ /** RESPONSIVE Extra Large >1200px*/
+ .wp-block-codebaou-hal21-codebaou-hal21-menu {
+	display:flex;
+	position:relative;
+	max-width:80%;
+	width:80%;
+	margin-left:-20px;
+	overflow:hidden;
+	flex-direction:row;
+	justify-content: start;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul{
+	display:flex;
+	flex-direction:row;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul > li{
+	list-style:none;
+	display:flex;
+	flex-direction:row;
+	margin:12px;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul > li > a{
+	text-decoration: none;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu svg{
+	display:none;
+}
+
+@media(max-width:1024px){
+	.wp-block-codebaou-hal21-codebaou-hal21-menu{
+		flex-direction:row;
+		justify-content: end;
+	}
+
+	.wp-block-codebaou-hal21-codebaou-hal21-menu > div{
+		display:none;
+		justify-content: center;
+		position:fixed;
+		top:160px;;
+		left:0;
+		min-width:100vw;
+		min-height:70vh;
+		opacity: none;
+		z-index:4;
+		overflow:none;
+	}
+
+	.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul{
+		display:flex;
+		width:100%;
+		flex-direction:column;
+		margin:0;
+		padding:0;
+		padding-top:20px;
+		background-color: rgba(255, 255, 255, 0.3); /* El último valor es la opacidad */
+  		/* Difuminar el fondo detrás del elemento */
+ 		backdrop-filter: blur(2px);
+	}
+
+	.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul > li{
+	
+		display:flex;
+		flex-direction:row;
+		justify-content: center;
+		padding-top:12px;
+		padding-bottom:12px;
+	}
+
+	.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul > li > a{
+		width:100%;
+		text-align:center;
+		padding-top:12px;
+		padding-bottom:12px;
+	}
+
+	.wp-block-codebaou-hal21-codebaou-hal21-menu svg{
+		position:relative;
+		width:100px;
+		height:100px;
+		display:block;
+	}
+}

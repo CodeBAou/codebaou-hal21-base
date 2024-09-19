@@ -1,0 +1,35 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical {
+	background-color: none;
+	min-width:200px;
+	min-height:200px;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	padding:10px;
+}
+
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical:hover{
+	border:1px solid white;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical > li{
+	display:block;
+	position:relative;
+	width:100%;
+	text-align:center;
+	margin:0;
+	margin-top:15px;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical > li > a{
+	width:100%;
+	position:relative;
+	text-decoration: none;
+}

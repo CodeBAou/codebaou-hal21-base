@@ -1,0 +1,60 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ .wp-block-codebaou-hal21-codebaou-hal21-menu-vertical {
+	background-color: none;
+	min-width:200px;
+	min-height:200px;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	padding:0;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical > div{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical > div > ul {
+	padding:10px;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical > div > ul > li{
+	display:block;
+	position:relative;
+	width:100%;
+	text-align:center;
+	margin:0;
+	margin-top:15px;
+	list-style: none;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical > div > ul > li > a{
+	width:100%;
+	position:relative;
+	text-decoration: none;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical > div > ul > li > a:hover{
+	text-decoration:underline;
+}
+
+@media( max-width:  var(--responsive-medium-minimun) ){
+
+	.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical{
+		position:relative;
+		width:100%;
+		height:auto;
+	}
+
+	.wp-block-codebaou-hal21-codebaou-hal21-menu-vertical > div{
+		position:relative;
+		width:100%;
+		height:auto;
+	}
+}

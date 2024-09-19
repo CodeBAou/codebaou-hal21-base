@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "codebaou-hal21/codebaou-hal21-image",
+  "version": "0.1.0",
+  "title": "Codebaou Image",
+  "category": "theme",
+  "icon": "smiley",
+  "description": "Imagen LazyLoad and sizes by screem",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": true
+  },
+  "attributes": {
+    "width": {
+      "type": "number",
+      "default": "auto"
+    },
+    "height": {
+      "type": "number",
+      "default": "auto"
+    },
+    "toggleSelection": {
+      "type": "number"
+    },
+    "mediaID": {
+      "type": "number"
+    },
+    "mediaALT": {
+      "type": "string",
+      "default": ""
+    },
+    "srcfull": {
+      "type": "string",
+      "default": ""
+    },
+    "srclarge": {
+      "type": "string",
+      "default": ""
+    },
+    "srcmedium": {
+      "type": "string",
+      "default": ""
+    },
+    "srcthumbnail": {
+      "type": "string",
+      "default": ""
+    },
+    "widthfull": {
+      "type": "number"
+    },
+    "widthlarge": {
+      "type": "number"
+    },
+    "widththumbnail": {
+      "type": "number"
+    },
+    "filtroTransparenciaLadosImg": {
+      "type": "boolean",
+      "default": false
+    },
+    "classDesvanece": {
+      "type": "string",
+      "default": "string"
+    }
+  },
+  "textdomain": "codebaou-hal21-image",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

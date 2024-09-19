@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"typography": {
+			"customFontSize": true,
+			"fontFamilies": [
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"fontFamily": "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif"
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"fontFamily": "'Open Sans', sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Open Sans",
+							"fontWeight": "300 800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/open-sans.woff2" ]
+						}
+					]
+				},
+				{
+					"name":"Montserrat",
+					"slug":"monserrat",
+					"fontFamily":"'Montserrat', sans-serif",
+					"fontFace":[
+						{
+							"fontFamily":"Montserrat",
+							"fontWeight": "300",
+							"fontStyle":"normal"
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {},
+	"customTemplates": [],
+	"templateParts": [],
+	"patterns": []
+}

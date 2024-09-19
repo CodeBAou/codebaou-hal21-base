@@ -1,0 +1,1 @@
+console.log("Hello World! (from codebaou-wp-codebaou-wp-responsiveimage block)");

@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "codebaou-hal21/codebaou-hal21-menu-vertical",
+	"version": "0.1.0",
+	"title": "Codebaou-hal21-vertical-menu",
+	"category": "theme",
+	"icon": "smille",
+	"description": "Un menu vertical para el footer",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"selectedMenuVertical":{
+			"type":"string"
+		},
+		"textColorMenuVertical":{
+			"type":"string",
+			"default": "#ffffff"
+		},
+		"selectedMenuId":{
+			"type":"number",
+			"default":0
+		}
+	},
+	"textdomain": "codebaou-hal21-menu-vertical",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
