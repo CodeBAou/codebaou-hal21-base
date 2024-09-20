@@ -97,8 +97,6 @@ add_action( 'after_setup_theme', 'codebaou_hal21_theme_base_enqueue_editor_style
 /** SCRIPTS */
 
 
-
-
 /** BLOQUES REGISTRO */
 
 function Register_Block_codebaou_hal21_menu(){

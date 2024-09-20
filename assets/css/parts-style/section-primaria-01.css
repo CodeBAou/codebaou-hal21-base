@@ -28,6 +28,9 @@
     left:10%;
     margin:0;
     font-size:6em;
+    animation-name:AnimationLoad-primaria-01-title;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }
 
 .codebaou-section-primaria-01-content > h2{
@@ -36,6 +39,9 @@
     left:40%;
     margin:0;
     font-size:6em;
+    animation-name:AnimationLoad-primaria-01-title;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
 }
 
 .codebaou-section-primaria-01-content > h3{
@@ -44,6 +50,9 @@
     left:80%;
     margin:0;
     font-size:4em;
+    animation-name:AnimationLoad-primaria-01-title;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 
