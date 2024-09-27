@@ -47,10 +47,12 @@ function menu(){
         case true:
             open_codebaou_menu = false;
             document.getElementsByClassName("wp-block-codebaou-hal21-codebaou-hal21-menu")[0].getElementsByTagName("div")[0].style.display ="none";
+            document.getElementById("codebaou-icon-menu-principal").style.position = "absolute";    
             break;
         case false:
             open_codebaou_menu = true;
             document.getElementsByClassName("wp-block-codebaou-hal21-codebaou-hal21-menu")[0].getElementsByTagName("div")[0].style.display ="block";
+            document.getElementById("codebaou-icon-menu-principal").style.position = "fixed";
             break;
     }
 }
@@ -105,7 +107,7 @@ function menu(){
 
     ?>
 
-    <svg onClick='menu()' fill="<?php echo $attributes['colorIconMenuMobile']?>" width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <svg id="codebaou-icon-menu-principal" onClick='menu()' fill="<?php echo $attributes['colorIconMenuMobile']?>" width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h4v4H0V0zm0 6h4v4H0V6zm0 6h4v4H0v-4zM6 0h4v4H6V0zm0 6h4v4H6V6zm0 6h4v4H6v-4zm6-12h4v4h-4V0zm0 6h4v4h-4V6zm0 6h4v4h-4v-4z" fill-rule="evenodd"/>
     </svg>
 </div>

@@ -36,6 +36,7 @@
 			"type":"string",
 			"default":"#000000"
 		}
+		
     },
 	"textdomain": "codebaou-hal21-menu",
 	"editorScript": "file:./index.js",
