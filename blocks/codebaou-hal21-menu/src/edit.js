@@ -13,11 +13,8 @@ const Edit = (props) => {
 
     const { 
         selectedMenu, 
-        selectedMenuId, 
-        backgroundColorMenu, 
-        backgroundColorLi, 
-        TextColorTextMenu, 
-        colorIconMenuMobile 
+        TextColorTextMenu,
+        colorBotonesMenu
     } = attributes;
 
     useEffect(() => {
@@ -36,7 +33,6 @@ const Edit = (props) => {
 
     }, [selectedMenu]); // Añade un array vacío como dependencia para ejecutar solo una vez
 
-
     // Transformar menus en opciones para SelectControl
     const options = menus.map(item => ({
         label: item.name, // Usa item.name para la etiqueta en lugar de una cadena estática
@@ -45,7 +41,6 @@ const Edit = (props) => {
 
     //Imprimir <li> html
     const getMenuSelectedLinks = () => {
-
         let links = menus.map( menu => {
             if( selectedMenu == menu.slug){
                 return menu.links
@@ -61,32 +56,19 @@ const Edit = (props) => {
         setAttributes({ selectedMenu: selected, selectedMenuId:idsanatize });
     };
 
-    //Background menu content
-    const onChangeColor = (newColor) => {
-        setAttributes({ backgroundColorMenu: newColor.hex });
-    };
-
-    //Background menu li
-    const onChangeColorLi = (newColor) => {
-        setAttributes({ backgroundColorLi: newColor.hex });
-    };
-
-     //Color texto enlace del menu
+    //Color texto enlace del menu
      const onChangeColorTextMenu = (newColor) => {
         setAttributes({ TextColorTextMenu: newColor.hex });
     };
 
-    //Color texto enlace del menu
-    const onChangeColorIconMobileMenu = (newColor) => {
-        setAttributes({ colorIconMenuMobile: newColor.hex });
-    };
+    //Fondo botones menu
+    const onChangeColorFondoMenu = (newColor) => {
+        setAttributes({colorBotonesMenu:newColor.hex});
+    }
 
     return (
-
         <>
-
             <InspectorControls>
-
                 <SelectControl
                     label={__('Selecciona Menu para mostrar', 'codebaou-hal21-menu-select')}
                     value={selectedMenu}
@@ -94,23 +76,7 @@ const Edit = (props) => {
                     onChange={onChangeMenu}
                 />
 
-                <PanelBody title={__('Background Color Menu', 'codebaou-backgroundColor-fondomenu')}>
-                    <ColorPicker
-                        color={backgroundColorMenu}
-                        onChangeComplete={onChangeColor}
-                        disableAlpha
-                    />
-                </PanelBody>
-
-                <PanelBody title={__('Background Color Menu Item', 'codebaou-backgroundColor-fondomenu')}>
-                    <ColorPicker
-                        color={backgroundColorLi}
-                        onChangeComplete={onChangeColorLi}
-                        disableAlpha
-                    />
-                </PanelBody>
-
-                <PanelBody title={__('Color Enlaces', 'codebaou-backgroundColor-fondomenu')}>
+                <PanelBody title={__('Color texto', 'codebaou-backgroundColor-fondomenu')}>
                     <ColorPicker
                         color={TextColorTextMenu}
                         onChangeComplete={onChangeColorTextMenu}
@@ -118,35 +84,34 @@ const Edit = (props) => {
                     />
                 </PanelBody>
 
-                <PanelBody title={__('Color Icon', 'codebaou-backgroundColor-fondomenu')}>
+                <PanelBody title={__('Color botones', 'codebaou-backgroundColor-fondomenu')}>
                     <ColorPicker
-                        color={colorIconMenuMobile}
-                        onChangeComplete={onChangeColorIconMobileMenu}
+                        color={colorBotonesMenu}
+                        onChangeComplete={onChangeColorFondoMenu}
                         disableAlpha
                     />
                 </PanelBody>
 
             </InspectorControls>
 
-            <div {...useBlockProps()} style={{ backgroundColor: backgroundColorMenu }}>
+            <div {...useBlockProps()}>
                {(!selectedMenu || selectedMenu == "") 
                ?
                     <span> Selecciona Menu </span>
                :    
                <ul className="codebaou-hal21-menu-ul" > 
                     {
-                       (getMenuSelectedLinks()[0]) ? getMenuSelectedLinks()[0].map( (link,index)=>  <li className="codebaou-hal21-menu-li" key={"codebaou-item-menu-"+index} style={{ backgroundColor: backgroundColorLi }}> <a style={{ color: TextColorTextMenu }} className="codebaou-hal21-menu-a" > {link.title} </a> </li> ): null 
+                       (getMenuSelectedLinks()[0]) ? getMenuSelectedLinks()[0].map( (link,index)=>  <li style={{ backgroundColor: colorBotonesMenu }} className="codebaou-hal21-menu-li" key={"codebaou-item-menu-"+index}> <a style={{ color: TextColorTextMenu }} className="codebaou-hal21-menu-a" > {link.title} </a> </li> ): null 
                     }
                </ul>
                     
                 } 
 
-                <svg fill={colorIconMenuMobile} width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <svg fill={TextColorTextMenu} width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0h4v4H0V0zm0 6h4v4H0V6zm0 6h4v4H0v-4zM6 0h4v4H6V0zm0 6h4v4H6V6zm0 6h4v4H6v-4zm6-12h4v4h-4V0zm0 6h4v4h-4V6zm0 6h4v4h-4v-4z" fill-rule="evenodd"/>
                 </svg>
 
-            </div>
-            
+            </div>          
         </>
     );
 };

@@ -1,1 +1,68 @@
-.wp-block-codebaou-hal21-codebaou-hal21-menu{align-self:end;display:flex;flex-direction:row;justify-content:end;max-width:100%!important;padding-right:25px;position:relative;width:100%!important}.wp-block-codebaou-hal21-codebaou-hal21-menu>ul{display:flex;flex-direction:row;margin:0!important}.wp-block-codebaou-hal21-codebaou-hal21-menu>ul>li{display:flex;flex-direction:row;list-style:none;margin:12px}.wp-block-codebaou-hal21-codebaou-hal21-menu>ul>li>a{text-decoration:none}.wp-block-codebaou-hal21-codebaou-hal21-menu svg{display:none}@media(max-width:1024px){.wp-block-codebaou-hal21-codebaou-hal21-menu{align-self:center;flex-direction:row;justify-content:end}.wp-block-codebaou-hal21-codebaou-hal21-menu>ul{display:none}.wp-block-codebaou-hal21-codebaou-hal21-menu svg{display:block;height:30px;width:30px}}
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * MENU RESPONSIVE
+ * 	>1200px
+ *  >992px 
+ *  >768px 
+ *  ≥576px  
+ *  <576px
+ */
+/** RESPONSIVE Extra Large >1200px*/
+.wp-block-codebaou-hal21-codebaou-hal21-menu {
+  display: flex;
+  position: relative;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex-direction: row;
+  padding-right: 25px;
+  justify-content: end; /* ALINEAR HORIZONTAL */
+  align-self: end; /* ALINEAR VERTICAL */
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > ul > li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  margin-right: 1px;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > ul > li > a {
+  text-decoration: none;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu svg {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .wp-block-codebaou-hal21-codebaou-hal21-menu {
+    flex-direction: row;
+    justify-content: end; /* ALINEAR HORIZONTAL */
+    align-self: center; /* ALINEAR VERTICAL */
+  }
+  .wp-block-codebaou-hal21-codebaou-hal21-menu > ul {
+    display: none;
+  }
+  .wp-block-codebaou-hal21-codebaou-hal21-menu svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/

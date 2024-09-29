@@ -1,15 +1,3 @@
-.woocommerce{
-    padding-top:10%;
-    padding-left:10%;
-    padding-right:10%;
-}
-
-
-.woocommerce > nav {
-
-}
-
-.woocommerce > nav > ul > li > a{
-    color:rgb(119, 0, 0);
-    text-decoration: none;
-}
+.woocommerce{padding-top:10%; padding-left:10%; padding-right:10%;}
+.woocommerce > nav {}
+.woocommerce > nav > ul > li > a{color:rgb(119, 0, 0);text-decoration: none;}

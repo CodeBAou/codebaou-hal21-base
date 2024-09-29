@@ -1,1 +1,118 @@
-.wp-block-codebaou-hal21-codebaou-hal21-menu{align-self:end;display:flex;flex-direction:row;justify-content:end;max-width:100%!important;padding-left:25px;position:relative;width:100%!important}.wp-block-codebaou-hal21-codebaou-hal21-menu>div>ul{display:flex;flex-direction:row;margin:0!important}.wp-block-codebaou-hal21-codebaou-hal21-menu>div>ul>li{display:flex;flex-direction:row;list-style:none;margin:12px}.wp-block-codebaou-hal21-codebaou-hal21-menu>div>ul>li>a{text-decoration:none}.wp-block-codebaou-hal21-codebaou-hal21-menu svg{display:none}@media(max-width:1024px){.wp-block-codebaou-hal21-codebaou-hal21-menu{align-self:center;flex-direction:row;justify-content:end}.wp-block-codebaou-hal21-codebaou-hal21-menu>div{animation-duration:2s;animation-fill-mode:forwards;animation-name:Animation-menu-open;background-color:hsla(0,0%,5%,.664);display:none;justify-content:center;right:0;min-width:100vw;opacity:none;overflow:none;overflow:hidden;position:fixed;top:0;z-index:2}.wp-block-codebaou-hal21-codebaou-hal21-menu>div>ul{-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);border-bottom-right-radius:50vh;display:flex;flex-direction:column;margin:0;min-height:100vh;min-width:100vw;padding:200px 0 0;width:100%}.wp-block-codebaou-hal21-codebaou-hal21-menu>div>ul>li{display:flex;flex-direction:row;justify-content:center;padding-bottom:12px;padding-top:12px}.wp-block-codebaou-hal21-codebaou-hal21-menu>div>ul>li>a{padding-bottom:12px;padding-top:12px;text-align:center;width:100%}.wp-block-codebaou-hal21-codebaou-hal21-menu svg{display:block;height:30px;position:absolute;width:30px;z-index:4}}@keyframes Animation-menu-open{0%{border-radius:100%;height:0;min-height:0}99%{border-radius:0;height:100vh}to{min-height:100vh}}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * MENU RESPONSIVE
+ * 	>1200px
+ *  >992px 
+ *  >768px 
+ *  ≥576px  
+ *  <576px
+ */
+/** RESPONSIVE Extra Large >1200px*/
+.wp-block-codebaou-hal21-codebaou-hal21-menu {
+  display: flex;
+  position: relative;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex-direction: row;
+  padding-left: 25px;
+  justify-content: end; /* ALINEAR HORIZONTAL */
+  align-self: end; /* ALINEAR VERTICAL */
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0 !important;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul > li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 12px;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul > li > a {
+  text-decoration: none;
+}
+
+.wp-block-codebaou-hal21-codebaou-hal21-menu svg {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .wp-block-codebaou-hal21-codebaou-hal21-menu {
+    flex-direction: row;
+    justify-content: end; /* ALINEAR HORIZONTAL */
+    align-self: center; /* ALINEAR VERTICAL */
+  }
+  .wp-block-codebaou-hal21-codebaou-hal21-menu > div {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 100vw;
+    opacity: none;
+    z-index: 2;
+    overflow: none;
+    animation-name: Animation-menu-open;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+  }
+  .wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-top: 200px;
+    min-width: 100vw;
+    min-height: 100vh;
+    /* Difuminar el fondo detrás del elemento */
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border-bottom-right-radius: 50vh;
+  }
+  .wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .wp-block-codebaou-hal21-codebaou-hal21-menu > div > ul > li > a {
+    width: 100%;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .wp-block-codebaou-hal21-codebaou-hal21-menu svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+    z-index: 4;
+    position: absolute;
+  }
+}
+@keyframes Animation-menu-open {
+  0% {
+    height: 0vh;
+    border-radius: 100%;
+    min-height: 0vh;
+  }
+  99% {
+    height: 100vh;
+    border-radius: 0%;
+  }
+  100% {
+    min-height: 100vh;
+  }
+}

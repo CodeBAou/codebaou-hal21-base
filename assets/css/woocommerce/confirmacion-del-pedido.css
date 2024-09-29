@@ -1,123 +1,61 @@
 .wc-block-order-confirmation-summary {
     display:flex;
     flex-direction:row;
-    justify-content: center;
-}
-
+    justify-content: center;}
 .wc-block-order-confirmation-summary > div{
-
     display:flex;
     width:768px;
     height:auto;
     flex-wrap: wrap;
-    flex-direction:row;
-}
-
-/** Titulo Pedido Status */
+    flex-direction:row;}
 .wc-block-order-confirmation-status{
     text-align:center;
     padding-top:100px;
     padding-bottom:10px;
-    box-shadow: 5px 5px 5px rgb(172, 172, 172,0.7);
-}
-
-.wc-block-order-confirmation-status > p{
-    color:rgb(189, 0, 0) !important;
-}
-
-
-/** Datos identificación del pedido */
-.wc-block-order-confirmation-summary > div > ul{
-
-}
-
-.wc-block-order-confirmation-summary > div > ul > li{
-    
-}
-
+    box-shadow: 5px 5px 5px rgb(172, 172, 172,0.7);}
+.wc-block-order-confirmation-status > p{color:rgb(189, 0, 0) !important;}
+.wc-block-order-confirmation-summary > div > ul{}
+.wc-block-order-confirmation-summary > div > ul > li{}
 .wc-block-order-confirmation-summary > div > ul > li > span:first-child{
     color:rgb(139, 0, 0) !important;
-    font-size:14px;
-}
-
-.wc-block-order-confirmation-summary > div > ul > li > span:nth-child(2){
-    font-size:12px;
-}
-
-
-/** Seccion detalles del pedido */
-
+    font-size:14px;}
+.wc-block-order-confirmation-summary > div > ul > li > span:nth-child(2){font-size:12px;}
 .wp-block-woocommerce-order-confirmation-totals-wrapper{
     width:900px;
     padding-top:100px;
-    padding-bottom:100px;
-}
-
+    padding-bottom:100px;}
 .wp-block-woocommerce-order-confirmation-totals-wrapper > div > div > h3{
     color:rgb(139, 0, 0) !important;
-    box-shadow: 5px 5px 5px rgb(172, 172, 172,0.7);
-}
-
-.wp-block-woocommerce-order-confirmation-totals-wrapper > div > div > div > div > table{
-    color:rgb(65, 65, 65) !important;
-}
-
+    box-shadow: 5px 5px 5px rgb(172, 172, 172,0.7);}
+.wp-block-woocommerce-order-confirmation-totals-wrapper > div > div > div > div > table{color:rgb(65, 65, 65) !important;}
 .wp-block-woocommerce-order-confirmation-totals-wrapper > div > div > div > div > table a{
     color:rgb(0, 0, 0) !important;
-    text-decoration: none;  
-}
-
+    text-decoration: none;  }
 .wp-block-woocommerce-order-confirmation-totals-wrapper > div > div > div > div > table a:hover{
     text-decoration: underline;
-    color:rgb(0, 0, 0) !important;
-}
-
-
-/** Seccion direccion de envio y facturación */
+    color:rgb(0, 0, 0) !important;}
 .woocommerce-order-confirmation-address-wrapper {
     display: flex;
     flex-wrap:wrap;
-    width:900px;
-}
-
-/** Direccion de envio*/
-.woocommerce-order-confirmation-address-wrapper:first-child{
-
-}
-
-/** Direccion de facturación */
-.woocommerce-order-confirmation-address-wrapper:first-child:nth-child(2){
-
-}
-
+    width:900px;}
+.woocommerce-order-confirmation-address-wrapper:first-child{}
+.woocommerce-order-confirmation-address-wrapper:first-child:nth-child(2){}
 .woocommerce-order-confirmation-address-wrapper > div > div > div > div > h3 {
     color:rgb(139, 0, 0) !important;
-    box-shadow: 5px 5px 5px rgb(172, 172, 172,0.7);
-}
-
-.woocommerce-order-confirmation-address-wrapper > div > div > div > div > div {
-    color:rgb(65, 65, 65) !important;
-}
-
-
+    box-shadow: 5px 5px 5px rgb(172, 172, 172,0.7);}
+.woocommerce-order-confirmation-address-wrapper > div > div > div > div > div {color:rgb(65, 65, 65) !important;}
 @media(max-width:768px){
-    h3{
-
-    }
-
+    h3{}
     .wc-block-order-confirmation-summary > div{ 
         width: 100%; 
         padding-left:10px;
-        text-align:center;
-    }
+        text-align:center;}
     .wp-block-woocommerce-order-confirmation-totals-wrapper{ 
         width: 100%; 
         padding-left:10px;
-        text-align:center;
-    }
+        text-align:center;}
     .woocommerce-order-confirmation-address-wrapper { 
         width: 100%; 
         padding-left:10px;
-        text-align:center;
-    }
+        text-align:center;}
 }

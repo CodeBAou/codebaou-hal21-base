@@ -3,6 +3,7 @@
 	"version": 3,
 	"settings": {
 		"typography": {
+			"appearanceTools": false,
 			"customFontSize": true,
 			"fontFamilies": [
 				{

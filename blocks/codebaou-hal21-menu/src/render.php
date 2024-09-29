@@ -11,10 +11,10 @@ function agregar_estilo_personalizado_a_menu($item_output, $item, $depth, $args)
 
     
     // Verificar si el color de fondo se ha definido en los atributos del bloque
-    if (isset($args->block_attributes['backgroundColorLi'])) {
+    if (isset($args->block_attributes['colorBotonesMenu'])) {
         // Crear el estilo dinámico
         $style = '
-            background-color: ' . esc_attr($args->block_attributes['backgroundColorLi']) . '; 
+            background-color: ' . esc_attr($args->block_attributes['colorBotonesMenu']) . '; 
             color: ' . esc_attr($args->block_attributes['TextColorTextMenu'] . ';');
 
         // Aplicar el estilo en el <li> o <a>
@@ -60,7 +60,7 @@ function menu(){
 
 </script>
 
-<div <?php echo get_block_wrapper_attributes(); ?> style="background-color: <?php echo esc_attr( $attributes['backgroundColorMenu'] ); ?>;" >
+<div <?php echo get_block_wrapper_attributes(); ?>  >
 
 <?php
     //Obtener ubicaciones y ver cual coincide con el atributo (Ubicacion seleccionada en edit)
@@ -107,7 +107,7 @@ function menu(){
 
     ?>
 
-    <svg id="codebaou-icon-menu-principal" onClick='menu()' fill="<?php echo $attributes['colorIconMenuMobile']?>" width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <svg id="codebaou-icon-menu-principal" onClick='menu()' fill="<?php echo $attributes['TextColorTextMenu']?>" width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h4v4H0V0zm0 6h4v4H0V6zm0 6h4v4H0v-4zM6 0h4v4H6V0zm0 6h4v4H6V6zm0 6h4v4H6v-4zm6-12h4v4h-4V0zm0 6h4v4h-4V6zm0 6h4v4h-4v-4z" fill-rule="evenodd"/>
     </svg>
 </div>

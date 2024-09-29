@@ -20,21 +20,13 @@
       "type": "number",
       "default": 0
     },
-    "backgroundColorMenu": {
-      "type": "string",
-      "default": "#ffffff"
-    },
-    "backgroundColorLi": {
-      "type": "string",
-      "default": "#ffffff"
-    },
     "TextColorTextMenu": {
       "type": "string",
       "default": "#000000"
     },
-    "colorIconMenuMobile": {
+    "colorBotonesMenu": {
       "type": "string",
-      "default": "#000000"
+      "default": "white"
     }
   },
   "textdomain": "codebaou-hal21-menu",

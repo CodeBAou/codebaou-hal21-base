@@ -12,142 +12,97 @@ License URI: https://choosealicense.com/licenses/agpl-3.0/
 Text Domain: codebaou-hal21-theme hal21 codebaou
 Tags: kitdigital hal21 codebaou multilenguaje empresa personal
 */
-
 :root {
-    /** Responsive screen*/
-    --responsive-small-minimum:576px;
-    --responsive-medium-minimun:768px;
-    --responsive-large-minimum:992px;
-    --responsive-extraLarge-minimum:1200px;
-
-    /** buttoms */
-    --codebaou-hal21-v-btn-width:auto;
-    --codebaou-hal21-v-btn-height:200px;
-    --codebaou-hal21-v-btn-padding:12px;
+  --responsive-small-minimum: 576px;
+  --responsive-medium-minimun: 768px;
+  --responsive-large-minimum: 992px;
+  --responsive-extraLarge-minimum: 1200px;
+  --codebaou-hal21-v-btn-width: auto;
+  --codebaou-hal21-v-btn-height: 200px;
+  --codebaou-hal21-v-btn-padding: 12px;
 }
-
-iframe{
-    width:765px;
+iframe {
+  width: 765px;
 }
-
-/** FUENTES */
 @font-face {
-    font-family:  "Montserrat", system-ui;
-    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+  font-family: "Montserrat", system-ui;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+}
+.codebaou-hal21-theme-header-content {
+  min-width: 100%;
+  min-height: var(--codebaou-hal21-v-sitelogo-content-height);
+}
+.codebaou-hal21-theme-sitelogo {
+  margin: 10px !important;
+}
+@media (max-width: 765px) {
+  .kill-down-765px {
+    display: none;
   }
-
-
-  
-/** ESTILOS THEME*/
-
-/** Header content */
-.codebaou-hal21-theme-header-content{ 
-    min-width:100%;
-    min-height:var(--codebaou-hal21-v-sitelogo-content-height);
-    padding-left:20px;
-    padding-right: 20px;
 }
-
-.codebaou-hal21-theme-sitelogo{
-    max-width:350px;
-    width:20%;
-    min-width:100px;
-    min-height:100px;
-    height:115px;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    flex-grow: 3;
-    margin-left:30px;
+.plantilla-legal-codebaou-hal21-base {
+  padding: 5%;
 }
-
-@media( max-width:765px ){
-    .kill-down-765px{
-        display:none;
-    }
+.plantilla-legal-codebaou-hal21-base * {
+  text-decoration: none;
+  font-size: 16px;
 }
-
-
-/** DOCUMENTOS LEGALES ------------------*/
-.plantilla-legal-codebaou-hal21-base{
-    padding:5%;
+.plantilla-legal-codebaou-hal21-base > p,
+li {
+ /** color: rgb(54, 54, 54);*/
+  font-weight: 300;
 }
-
-.plantilla-legal-codebaou-hal21-base *{
-    text-decoration: none;
-    font-size:16px;
+.plantilla-legal-codebaou-hal21-base > p {
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
-
-.plantilla-legal-codebaou-hal21-base > p, li{
-    color:rgb(54, 54, 54);
-    font-weight: 300;
+.plantilla-legal-codebaou-hal21-base > ul > li {
+  margin-top: 10px;
 }
-
-.plantilla-legal-codebaou-hal21-base > p{
-    margin-top:40px;
-    margin-bottom:30px;
+.plantilla-legal-codebaou-hal21-base b {
+  /** color: black;*/
+  font-weight: 500;
 }
-
-.plantilla-legal-codebaou-hal21-base > ul > li{
-    margin-top:10px;
+.plantilla-legal-codebaou-hal21-base > h1 {
+  font-size: 40px;
 }
-
-.plantilla-legal-codebaou-hal21-base b{
-    color:black;
-    font-weight: 500;
+.plantilla-legal-codebaou-hal21-base > h2 {
+  margin-top: 100px;
+  font-size: 25px;
+ /** color: rgb(43, 43, 43); */
+  font-weight: 900;
 }
-
-.plantilla-legal-codebaou-hal21-base > h1{
-    font-size:40px; 
+.plantilla-legal-codebaou-hal21-base > h3 {
+  margin-top: 50px;
+  font-size: 18px;
+  /** color: rgb(43, 43, 43); */
+  font-weight: 900;
 }
-
-.plantilla-legal-codebaou-hal21-base > h2{
-    margin-top:100px;
-    font-size:25px;
-    color:rgb(43, 43, 43);
-    font-weight:900;
+.plantilla-legal-codebaou-hal21-base span {
+  font-weight: bold;
 }
-
-.plantilla-legal-codebaou-hal21-base > h3{
-    margin-top:50px;
-    font-size:18px;
-    color:rgb(43, 43, 43);
-    font-weight:900;
+.plantilla-legal-codebaou-hal21-base > table {
+  display: flex;
 }
-
-.plantilla-legal-codebaou-hal21-base span{
-    font-weight: bold;
-}
-
-.plantilla-legal-codebaou-hal21-base > table{
-    display:flex;
-}
-
 .plantilla-legal-codebaou-hal21-base table tr {
-   height:30px;
-   
+  height: 30px;
 }
-
-.plantilla-legal-codebaou-hal21-base table th{
-    background-color:rgb(110, 110, 110);
-    color:white;
+.plantilla-legal-codebaou-hal21-base table th {
+  /** background-color: rgb(110, 110, 110); */
+  color: white;
 }
-
 .plantilla-legal-codebaou-hal21-base table th.title_table_legal {
-    padding-top:20px;
-    background-color:rgb(80, 80, 80);
-    color:white;
-    border-bottom:5px solid black;
+  padding-top: 20px;
+  /** background-color: rgb(80, 80, 80);*/
+  /** color: white;*/
+ /**  border-bottom: 5px solid black; */
 }
-
-.plantilla-legal-codebaou-hal21-base table th, td{
-    padding:10px;
-    border:1px solid black;
-    border-style:groove;
+.plantilla-legal-codebaou-hal21-base table th,
+td {
+  padding: 10px;
+  /** border: 1px solid black; */
+  border-style: groove;
 }
-
-.plantilla-legal-codebaou-hal21-base > ul > li b{
-    font-weight: 600;
+.plantilla-legal-codebaou-hal21-base > ul > li b {
+  font-weight: 600;
 }
-
