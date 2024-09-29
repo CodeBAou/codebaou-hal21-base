@@ -38,11 +38,8 @@ const Edit = props => {
   const [menus, setMenus] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useState)([]);
   const {
     selectedMenu,
-    selectedMenuId,
-    backgroundColorMenu,
-    backgroundColorLi,
     TextColorTextMenu,
-    colorIconMenuMobile
+    colorBotonesMenu
   } = attributes;
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
     // Fetch site URL
@@ -79,20 +76,6 @@ const Edit = props => {
     });
   };
 
-  //Background menu content
-  const onChangeColor = newColor => {
-    setAttributes({
-      backgroundColorMenu: newColor.hex
-    });
-  };
-
-  //Background menu li
-  const onChangeColorLi = newColor => {
-    setAttributes({
-      backgroundColorLi: newColor.hex
-    });
-  };
-
   //Color texto enlace del menu
   const onChangeColorTextMenu = newColor => {
     setAttributes({
@@ -100,10 +83,10 @@ const Edit = props => {
     });
   };
 
-  //Color texto enlace del menu
-  const onChangeColorIconMobileMenu = newColor => {
+  //Fondo botones menu
+  const onChangeColorFondoMenu = newColor => {
     setAttributes({
-      colorIconMenuMobile: newColor.hex
+      colorBotonesMenu: newColor.hex
     });
   };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
@@ -112,49 +95,34 @@ const Edit = props => {
     options: options,
     onChange: onChangeMenu
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Background Color Menu', 'codebaou-backgroundColor-fondomenu')
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ColorPicker, {
-    color: backgroundColorMenu,
-    onChangeComplete: onChangeColor,
-    disableAlpha: true
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Background Color Menu Item', 'codebaou-backgroundColor-fondomenu')
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ColorPicker, {
-    color: backgroundColorLi,
-    onChangeComplete: onChangeColorLi,
-    disableAlpha: true
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Color Enlaces', 'codebaou-backgroundColor-fondomenu')
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Color texto', 'codebaou-backgroundColor-fondomenu')
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ColorPicker, {
     color: TextColorTextMenu,
     onChangeComplete: onChangeColorTextMenu,
     disableAlpha: true
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Color Icon', 'codebaou-backgroundColor-fondomenu')
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Color botones', 'codebaou-backgroundColor-fondomenu')
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ColorPicker, {
-    color: colorIconMenuMobile,
-    onChangeComplete: onChangeColorIconMobileMenu,
+    color: colorBotonesMenu,
+    onChangeComplete: onChangeColorFondoMenu,
     disableAlpha: true
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(),
-    style: {
-      backgroundColor: backgroundColorMenu
-    }
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)()
   }, !selectedMenu || selectedMenu == "" ? (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, " Selecciona Menu ") : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "codebaou-hal21-menu-ul"
   }, getMenuSelectedLinks()[0] ? getMenuSelectedLinks()[0].map((link, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "codebaou-hal21-menu-li",
-    key: "codebaou-item-menu-" + index,
     style: {
-      backgroundColor: backgroundColorLi
-    }
+      backgroundColor: colorBotonesMenu
+    },
+    className: "codebaou-hal21-menu-li",
+    key: "codebaou-item-menu-" + index
   }, " ", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     style: {
       color: TextColorTextMenu
     },
     className: "codebaou-hal21-menu-a"
   }, " ", link.title, " "), " ")) : null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
-    fill: colorIconMenuMobile,
+    fill: TextColorTextMenu,
     width: "800px",
     height: "800px",
     viewBox: "0 0 16 16",
@@ -302,7 +270,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"codebaou-hal21/codebaou-hal21-menu","version":"0.1.0","title":"Codebaou-hal21-menu","category":"theme","icon":"smiley","description":"Un menu compatible con polylang del theme codebaou-hal21-base","example":{},"supports":{"html":false},"attributes":{"selectedMenu":{"type":"string","deafault":""},"selectedMenuId":{"type":"number","default":0},"backgroundColorMenu":{"type":"string","default":"#ffffff"},"backgroundColorLi":{"type":"string","default":"#ffffff"},"TextColorTextMenu":{"type":"string","default":"#000000"},"colorIconMenuMobile":{"type":"string","default":"#000000"}},"textdomain":"codebaou-hal21-menu","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"codebaou-hal21/codebaou-hal21-menu","version":"0.1.0","title":"Codebaou-hal21-menu","category":"theme","icon":"smiley","description":"Un menu compatible con polylang del theme codebaou-hal21-base","example":{},"supports":{"html":false},"attributes":{"selectedMenu":{"type":"string","deafault":""},"selectedMenuId":{"type":"number","default":0},"TextColorTextMenu":{"type":"string","default":"#000000"},"colorBotonesMenu":{"type":"string","default":"white"}},"textdomain":"codebaou-hal21-menu","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 
