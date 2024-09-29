@@ -1,41 +1,17 @@
 .wc-block-components-main{
     padding-left:10px;
-    padding-right:10px;
-}
-
-/** Información de contacto */
-
-.wc-block-checkout__form > div > div:nth-child(1){
-   
-}
-
-/** direccion de envio */
-.wc-block-checkout__form h2{
-    color:rgb(107, 0, 0);
-}
-
-.wc-block-components-panel__button span{
-    color:rgb(107, 0, 0);
-}
-
-.wc-block-components-panel__button {
-    color:rgb(114, 0, 0);
-}
+    padding-right:10px;}
+.wc-block-checkout__form > div > div:nth-child(1){}
+.wc-block-checkout__form h2{color:rgb(107, 0, 0);}
+.wc-block-components-panel__button span{color:rgb(107, 0, 0);}
+.wc-block-components-panel__button {color:rgb(114, 0, 0);}
 .wc-block-components-product-name{
     font-weight:600;
-    color:rgb(184, 0, 0);
-}
-.wc-block-components-totals-item__value{
-    font-size:12px;
-}
-
+    color:rgb(184, 0, 0);}
+.wc-block-components-totals-item__value{font-size:12px;}
 .wc-block-components-sidebar{
     padding-right:5%;
     border-left:5px solid gray;
     box-shadow: 5px 5px 5px rgb(182, 182, 182);
-    padding-bottom:20px;
-}
-
-.wc-block-components-product-details__name{
-    font-weight:600;
-}
+    padding-bottom:20px;}
+.wc-block-components-product-details__name{font-weight:600;}

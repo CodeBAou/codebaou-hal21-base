@@ -1,27 +1,17 @@
 @keyframes AnimationLoad-primaria-01-title{
     from {opacity:0}
-    to {opacity:0.8}
-}
-
-
+    to {opacity:0.8}}
 .codebaou-section-primaria-01-content * {
    margin:0;
-   padding:0;
-}
-
+   padding:0;}
 .codebaou-section-primaria-01-content{
     display:flex;
     position:relative;
-   
-    overflow:hidden;
-}
-
+    overflow:hidden;}
 .codebaou-section-primaria-01-content > img{
     width:auto;
     height:auto;
-    position:relative;
-}
-
+    position:relative;}
 .codebaou-section-primaria-01-content > h1{
     position:absolute !important;
     top:10%;
@@ -30,9 +20,7 @@
     font-size:6em;
     animation-name:AnimationLoad-primaria-01-title;
     animation-duration: 5s;
-    animation-fill-mode: forwards;
-}
-
+    animation-fill-mode: forwards;}
 .codebaou-section-primaria-01-content > h2{
     position:absolute !important;
     top:50%;
@@ -41,9 +29,7 @@
     font-size:6em;
     animation-name:AnimationLoad-primaria-01-title;
     animation-duration: 8s;
-    animation-fill-mode: forwards;
-}
-
+    animation-fill-mode: forwards;}
 .codebaou-section-primaria-01-content > h3{
     position:absolute !important;
     top:20%;
@@ -52,65 +38,37 @@
     font-size:4em;
     animation-name:AnimationLoad-primaria-01-title;
     animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-
+    animation-fill-mode: forwards;}
 @media(max-width:1161px){
     .codebaou-section-primaria-01-content > h1{
-       
-        font-size:4em;
-    }
-    
+        font-size:4em;}
     .codebaou-section-primaria-01-content > h2{
         top:60%;
-        font-size:4em;
-    }
-    
+        font-size:4em;}
     .codebaou-section-primaria-01-content > h3{
         top:30%;
-        font-size:3em;
-    }
-}
-
-
+        font-size:3em;}}
 @media(max-width:750px){
     .codebaou-section-primaria-01-content > h1{
         left:0;
-        font-size:3em;
-    }
-    
+        font-size:3em;}
     .codebaou-section-primaria-01-content > h2{
         top:60%;
         left:0;
-        font-size:4em;
-    }
-    
+        font-size:4em;}
     .codebaou-section-primaria-01-content > h3{
         top:40%;
         left:60%;
-        font-size:3em;
-    }
-
-}
-
-
+        font-size:3em;}}
 @media(max-width:554px){
-
     .codebaou-section-primaria-01-content > h1{
         left:0;
-        font-size:2em;
-    }
-    
+        font-size:2em;}
     .codebaou-section-primaria-01-content > h2{
         top:60%;
         left:0;
-        font-size:2em;
-    }
-    
+        font-size:2em;}
     .codebaou-section-primaria-01-content > h3{
         top:40%;
         left:80%;
-        font-size:1em;
-    }
-}
+        font-size:1em;}}

@@ -1,34 +1,11 @@
-/**Contenido Lista productos */
-.wp-block-woocommerce-cart-line-items-block{
-    padding-left:5%;
-}
-/** producto titulo */
-.wc-block-components-product-name{
-    color:rgb(128, 0, 0)
-}
-
-/** Aviso quedan pocos*/
+.wp-block-woocommerce-cart-line-items-block{padding-left:5%;}
+.wc-block-components-product-name{color:rgb(128, 0, 0)}
 .wc-block-components-product-badge{
     background-color:rgb(131, 0, 0);
     color:white;
     font-weight:800;
-    padding:5px;
-}
-
-/** Boton finalizar compra*/
-.wc-block-cart__submit-button{
-    background-color:rgb(95, 0, 0)!important;
-}
-
-.wp-block-woocommerce-cart-totals-block{
-    padding-right:2%;
-}
-
-
-.wp-block-woocommerce-cart-cross-sells-products-block{
-    min-width:100%;
-}
-
-.wp-block-woocommerce-cart-cross-sells-block{
-    padding-left:5%;
-}
+    padding:5px;}
+.wc-block-cart__submit-button{background-color:rgb(95, 0, 0)!important;}
+.wp-block-woocommerce-cart-totals-block{padding-right:2%;}
+.wp-block-woocommerce-cart-cross-sells-products-block{min-width:100%;}
+.wp-block-woocommerce-cart-cross-sells-block{padding-left:5%;}
