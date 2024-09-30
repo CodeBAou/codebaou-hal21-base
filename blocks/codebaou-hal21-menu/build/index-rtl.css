@@ -22,7 +22,9 @@
   flex-direction: row;
   padding-left: 25px;
   justify-content: end; /* ALINEAR HORIZONTAL */
-  align-self: end; /* ALINEAR VERTICAL */
+  align-self: center; /* ALINEAR VERTICAL */
+  margin-bottom: 20px;
+  padding: 30px;
 }
 
 .wp-block-codebaou-hal21-codebaou-hal21-menu > ul {
@@ -38,7 +40,7 @@
   display: flex;
   flex-direction: row;
   padding: 12px;
-  margin-left: 1px;
+  margin-left: 6px;
 }
 
 .wp-block-codebaou-hal21-codebaou-hal21-menu > ul > li > a {

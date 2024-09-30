@@ -9,11 +9,6 @@
 				{
 					"name": "Primary",
 					"slug": "primary",
-					"fontFamily": "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif"
-				},
-				{
-					"name": "Secondary",
-					"slug": "secondary",
 					"fontFamily": "'Open Sans', sans-serif",
 					"fontFace": [
 						{
@@ -22,18 +17,38 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [ "file:./assets/fonts/open-sans.woff2" ]
+						},
+						{
+							"fontFamily": "Open Sans",
+							"fontWeight": "300 800",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/open-sans-italic.woff2" ]
+						}
+					]
+				}, 
+
+				{
+					"name": "neueUltraLight",
+					"slug": "neueUltraLight",
+					"fontFamily": "'neue'",
+					"fontWeight": "200 300 800",
+					"fontFace":[
+						{
+							"fontFamily": "neue",
+							"src": [ "file:./assets/fonts/HelveticaNeueUltraLight.otf" ]
 						}
 					]
 				},
 				{
-					"name":"Montserrat",
-					"slug":"monserrat",
-					"fontFamily":"'Montserrat', sans-serif",
+					"name": "neueUltraHeavy",
+					"slug": "neueHeavy",
+					"fontFamily": "'neue heavy'",
+					"fontWeight": "200 300 800",
 					"fontFace":[
 						{
-							"fontFamily":"Montserrat",
-							"fontWeight": "300",
-							"fontStyle":"normal"
+							"fontFamily": "neue",
+							"src": [ "file:./assets/fonts/HelveticaNeueHeavy.otf" ]
 						}
 					]
 				}
