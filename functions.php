@@ -3,6 +3,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  * @package codebaou-hal21-theme-base*/
 add_theme_support( 'editor-styles' );
+
 function codebaou_hal21_theme_enqueue_styles() {
     wp_enqueue_style(
         'codebaou-hal21-base-theme-style', 
@@ -20,42 +21,19 @@ function codebaou_hal21_theme_enqueue_styles() {
         'codebaou-hal21-assetscss-woocommerce-base', 
         get_parent_theme_file_uri( 'assets/css/woocommerce/woocommerce.css' )
     ); 
-    wp_enqueue_style(
-        'codebaou-hal21-assetscss-woocommerce-confirmacion-del-pedido', 
-        get_parent_theme_file_uri( 'assets/css/woocommerce/confirmacion-del-pedido.css' )
-    ); 
-    wp_enqueue_style(
-        'codebaou-hal21-assetscss-woocommerce-catalogo-productos', 
-        get_parent_theme_file_uri( 'assets/css/woocommerce/catalogo-productos.css' )
-    );
-    wp_enqueue_style(
-        'codebaou-hal21-assetscss-woocommerce-carrito', 
-        get_parent_theme_file_uri( 'assets/css/woocommerce/carrito.css' )
-    );
-    wp_enqueue_style(
-        'codebaou-hal21-assetscss-woocommerce-finalizar-compra', 
-        get_parent_theme_file_uri( 'assets/css/woocommerce/finaliza-compra.css' )
-    );
-    wp_enqueue_style(
-        'codebaou-hal21-assetscss-woocommerce-mi-cuenta', 
-        get_parent_theme_file_uri( 'assets/css/woocommerce/mi-cuenta.css' )
-    );
  }
  add_action( 'wp_enqueue_scripts', 'codebaou_hal21_theme_enqueue_styles' );
+
  function codebaou_hal21_theme_base_enqueue_editor_styles() {
     add_editor_style( array(
         get_stylesheet_uri(),
             'assets/css/parts-style/section-primaria-01.css',
             'assets/css/templates-style/404.css',
-            'assets/css/woocommerce/woocommerce.css',
-            'assets/css/woocommerce/confirmacion-del-pedido.css', 
-            'assets/css/woocommerce/catalogo-productos.css',
-            'assets/css/woocommerce/carrito.css',
-            'assets/css/woocommerce/finaliza-compra.css',
-            'assets/css/woocommerce/mi-cuenta.css'
+            'assets/css/woocommerce/woocommerce.css'
         ) );
 }
 add_action( 'after_setup_theme', 'codebaou_hal21_theme_base_enqueue_editor_styles' );
+
 function Register_Block_codebaou_hal21_menu(){
     register_block_type( dirname(__FILE__).'/blocks/codebaou-hal21-menu/build/block.json');
     register_block_type( dirname(__FILE__).'/blocks/codebaou-hal21-menu-vertical/build/block.json');
@@ -63,6 +41,7 @@ function Register_Block_codebaou_hal21_menu(){
     register_block_type( dirname(__FILE__).'/blocks/codebaou-hal2-ultimas-entradas/build/block.json');
 }
 add_action('init', 'Register_Block_codebaou_hal21_menu');
+
 function register_codebaou_menu() {
     register_nav_menus(
         array(
@@ -71,6 +50,7 @@ function register_codebaou_menu() {
         ));
 }
 add_action('init', 'register_codebaou_menu');
+
 add_action('rest_api_init', function () {
     register_rest_route('codebaou_hal21_end_point/v1', '/site-url', array(
         'methods'  => 'GET',
@@ -85,11 +65,13 @@ add_action('rest_api_init', function () {
         'callback' => 'get_data_documento_Legal',
     ));
 });
+
 function get_site_url_api() {
     return array(
         'siteUrl' => get_site_url(),
     );
 }
+
 function get_menus_and_links_api() {
     $menus     = wp_get_nav_menus();
     $menu_data = array();
@@ -114,6 +96,7 @@ function get_menus_and_links_api() {
     }
     return new WP_REST_Response($menu_data, 200);
 }
+
 function get_data_documento_Legal(){
     $user_id         = get_current_user_id();
     $dominio_legal   = get_option( 'codebaou_dominio_legal', '' );
@@ -133,6 +116,7 @@ function get_data_documento_Legal(){
     echo get_user_meta( $user_id, 'codebaou_dominio_legal', true );
     return new WP_REST_Response($legal_data,200);
 }
+
 function agregar_campos_personalizados_usuario( $user ) {
     $user_id                 = get_current_user_id();
     $persona_nombre_Legal    = get_option( 'codebaou_nombre_legal', 'Nombre');
@@ -195,8 +179,11 @@ function agregar_campos_personalizados_usuario( $user ) {
     </table>
 <?php
 }
+
+
 add_action( 'show_user_profile', 'agregar_campos_personalizados_usuario' );
 add_action( 'edit_user_profile', 'agregar_campos_personalizados_usuario' );
+
 function guardar_campos_personalizados_usuario( $user_id ) {
      if ( isset( $_POST['codebaou_nombre_legal'] ) ) {
         update_option('codebaou_nombre_legal', sanitize_text_field( $_POST['codebaou_nombre_legal'] ) );}
@@ -215,5 +202,6 @@ function guardar_campos_personalizados_usuario( $user_id ) {
     if ( isset( $_POST['codebaou_email_legal'] ) ) {
         update_option('codebaou_email_legal', sanitize_text_field( $_POST['codebaou_email_legal'] ) );}
 }
+
 add_action( 'personal_options_update', 'guardar_campos_personalizados_usuario' );
 add_action( 'edit_user_profile_update', 'guardar_campos_personalizados_usuario' );

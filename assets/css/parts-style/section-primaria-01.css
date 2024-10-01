@@ -1,74 +1,69 @@
-@keyframes AnimationLoad-primaria-01-title{
-    from {opacity:0}
-    to {opacity:0.8}}
+@keyframes AnimationLoad-primaria-01-title {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
 .codebaou-section-primaria-01-content * {
-   margin:0;
-   padding:0;}
-.codebaou-section-primaria-01-content{
-    display:flex;
+  margin: 0;
+  padding: 0;
+
+}
+
+.codebaou-section-primaria-01-content {
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    max-width:100vw;
     position:relative;
-    overflow:hidden;}
-.codebaou-section-primaria-01-content > img{
-    width:auto;
-    height:auto;
-    position:relative;}
-.codebaou-section-primaria-01-content > h1{
-    position:absolute !important;
-    top:10%;
-    left:10%;
-    margin:0;
-    font-size:6em;
+}
+
+.codebaou-section-primaria-01-content img{
+    min-width:1200px;
+    min-height:1200px;
+}
+
+.codebaou-section-primaria-01-content > .codebaou-section-primaria-01-content-contenttext{
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    top:0;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.codebaou-section-primaria-01-content > .codebaou-section-primaria-01-content-contenttext > h1{
+    margin-bottom:10%;
+    font-size: 5rem;
+    font-weight: 700;
     animation-name:AnimationLoad-primaria-01-title;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;}
-.codebaou-section-primaria-01-content > h2{
-    position:absolute !important;
-    top:50%;
-    left:40%;
-    margin:0;
-    font-size:6em;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+}
+
+.codebaou-section-primaria-01-content > .codebaou-section-primaria-01-content-contenttext > h2{
+    margin-bottom:10%;
+    font-size: 5rem;
+    font-weight: 400;
     animation-name:AnimationLoad-primaria-01-title;
-    animation-duration: 8s;
-    animation-fill-mode: forwards;}
-.codebaou-section-primaria-01-content > h3{
-    position:absolute !important;
-    top:20%;
-    left:80%;
-    margin:0;
-    font-size:4em;
-    animation-name:AnimationLoad-primaria-01-title;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;}
-@media(max-width:1161px){
-    .codebaou-section-primaria-01-content > h1{
-        font-size:4em;}
-    .codebaou-section-primaria-01-content > h2{
-        top:60%;
-        font-size:4em;}
-    .codebaou-section-primaria-01-content > h3{
-        top:30%;
-        font-size:3em;}}
-@media(max-width:750px){
-    .codebaou-section-primaria-01-content > h1{
-        left:0;
-        font-size:3em;}
-    .codebaou-section-primaria-01-content > h2{
-        top:60%;
-        left:0;
-        font-size:4em;}
-    .codebaou-section-primaria-01-content > h3{
-        top:40%;
-        left:60%;
-        font-size:3em;}}
-@media(max-width:554px){
-    .codebaou-section-primaria-01-content > h1{
-        left:0;
-        font-size:2em;}
-    .codebaou-section-primaria-01-content > h2{
-        top:60%;
-        left:0;
-        font-size:2em;}
-    .codebaou-section-primaria-01-content > h3{
-        top:40%;
-        left:80%;
-        font-size:1em;}}
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+}
+
+@media( max-width:795px){
+    .codebaou-section-primaria-01-content > .codebaou-section-primaria-01-content-contenttext{
+        margin-right: 50px !important;
+    }
+    .codebaou-section-primaria-01-content > .codebaou-section-primaria-01-content-contenttext > h1{
+        font-size:4rem;
+        width:100%;
+
+        margin-bottom:20%;
+    }
+}
