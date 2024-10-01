@@ -35,6 +35,7 @@ iframe {
   text-decoration:none !important;
 }
 
+/** Header*/
 .codebaou-hal21-theme-header-content {
   min-width: 100%;
   min-height: var(--codebaou-hal21-v-sitelogo-content-height);
@@ -54,6 +55,7 @@ iframe {
   }
 }
 
+/** DOCUMENTOS LEGALES */
 .plantilla-legal-codebaou-hal21-base {
   padding: 5%;
 }

@@ -1,4 +1,4 @@
-theme wordpress
+# theme wordpress
 
 Theme Name: codebaou-hal21-theme-base
 
@@ -17,35 +17,60 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
-== Description ==
+# Description 
 
-Un tema wordpress compatible con woocommerce y polylang. Añade solucciones de tradución de menus (polylang lo introduce de forma premium solo), estilo para plantillas woocommerce, plantillas páginas "Legal" con variables que completan mediante formulario y coleccion de bloques gutemberg que soluccionan necesidades especificas de los clientes.
+Un tema wordpress. Con las siguientes incluye:
 
-== Copyright ==
+## Plantillas de página:
+    wp_
+    * 404.html
+    * archive.html
+    * front-page.html
+    * home.html
+    * index.html
+    COMUNES_
+    * page-contacto.html
+    * page-nosotros.html
+    LEGAL_
+    * page-legal.html
+    * page-accesibilidad.html
+    * page-politica-cookies-ue.html
+    * page-politica-privacidad.html
+    * page-terminos-y-condiciones.html
+    WOOCOMMERCE_
+        . Estilos Tienda
+
+
+## Funcionalidad
+ * theme woocommerce.
+ * Funcionalidad menus compatibles con Polylang.
+ * Fucionalidad , Usuarios > Perfil > documentación legal:
+    * Rellena con datos personales las plantillas de las paginas legales.
+
+## Parts
+    * section-primaria-01.html
+
+## Bloques
+ * menu vertical
+ * menu header
+ * image  (lazyload) + efectos
+ * ultimas Entradas
+
+# License 
 
 (C) 2024 hal21, 2025
 (C) codebaou , 2024
 
 License URI: https://choosealicense.com/licenses/agpl-3.0/
 
-En el fichero changelog.txt, se lista todo lo que contiene en tema por version.
 
-![Muestra plantilla](assets/image_readme/muestra1.png)
+# Diseño
 
-Formulario para rellenar las plantillas de las páginas legales.
+## FULL
+![Muestra plantilla](assets/image_readme/full.png)
 
-![Muestra plantilla](/assets/image_readme/muestra4.png)
+## MOBILE
+
+![Muestra plantilla](/assets/image_readme/mobile.png)
 
 
-Plantillas de página:
-    COMUNES_
-    * page-contacto.html
-    * page-nosotros.html
-    LEGAL
-    * page-legal.html
-    * page-accesibilidad.html
-    * page-politica-cookies-ue.html
-    * page-politica-privacidad.html
-    * page-terminos-y-condiciones.html
-    WOOCOMMERCE
-    * page-mi-cuenta.html
